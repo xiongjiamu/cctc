@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input,em { margin: 0; padding: 0;color: #ffffff;}
+body { font-size: 12px; line-height:2em; font-family:'Microsoft Yahei';background: #fafafa;}
+ul, ol { list-style-type: none; }
+select, input, img { vertical-align: middle; outline: none; border:none; }
+a,a:hover{text-decoration: none; outline: none;color: #205081}
+html { overflow-x: hidden; }
+.clearfix:after { content: ""; display: block; clear: both; }
+.clearfix { zoom: 1; }
+.clear{ clear:both;}
+
+
+/*顶部banner*/
+.main {width: 100%;}
+.banner {background:#5885B8;line-height: 90px;}
+.banner_lf span {font-size: 36px;color: #ffffff}
+.banner_rt span {padding-right: 20px;font-size: 16px;}
+.banner_rt span img {display: inline-block;width: 20px;height: 20px;margin-right: 10px}
+
+/*导航*/
+.navbar-default {background-color:#37496E}
+.navbar-default .navbar-nav>li>a {font-size: 18px;color: #ffffff}
+.navbar {border: none;margin-bottom: 0}
+.navbar-default .navbar-nav>li>a {position: relative}
+.navbar-nav>li a img {position: absolute;display: block;width:22px;height: 22px;top: -10px;left: 36px}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {background-color:#37496E;color: #ffffff }
+.navbar-default .navbar-nav>li>a:hover {color: #ffffff}
+.navbar-nav>li {margin-right: 8px}
+@media (min-width: 320px) and (max-width: 414px) {
+    .banner {line-height: 60px}
+}
+@media (max-width: 320px) {
+    .banner_lf span {font-size: 32px}
+}
+@media (max-width: 767px) {
+    .navbar-nav {text-align: center}
+    .navbar-nav>li a img {display: inline-block;position: absolute;top: 10px;left: -12px}
+    .navbar-default .navbar-nav>li>a {display: inline-block;position: relative}
+}
+
+/*中间banner*/
+.middle_banner {width: 100%;background: #5885B8;text-align: center;}
+.middle_banner h1 {font-size:72px;line-height: 108px;color: #ffffff;padding-top: 50px}
+.middle_banner p {font-size: 48px;color: #ffffff;line-height: 70px}
+.middle_banner span {font-size: 18px;color: #ffffff}
+.middle_banner a img {display: block;width: 176px;height: 176px;margin: 14px auto 97px}
+@media (max-width: 414px) {
+    .middle_banner h1 {font-size:28px;line-height: 70px;padding-top: 20px}
+    .middle_banner p {font-size: 24px;line-height: 40px}
+}
+
+
+/*大会亮点*/
+.main_content {width: 100%;background:#f1f5f8;}
+.section_meet_point {background: #ffffff;height: 100%;position: relative;top: -80px;box-shadow:0 1px 3px #ccc;overflow: hidden}
+.section_meet_point p {font-size: 16px;color: #6C7FA6;line-height: 24px;padding:50px 50px 24px 50px}
+.meet_point_des {padding:0 50px 0 60px}
+.meet_point_des a {font-size: 16px;color: #6C7FA6;line-height: 24px;padding-bottom: 10px}
+.meet_title {font-size: 36px;line-height:50px;color:#5885B8;margin-top:40px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;margin-left: 50px}
+.point_list {margin-top: 25px}
+.point_list li {background: #F0B400;color: #ffffff;text-align: center;font-size: 34px;font-weight: bold;line-height: 44px}
+.point_list li span {display: block;padding: 102px 0}
+.point_list li:nth-child(2) {font-size: 26px;line-height: 34px}
+.point_list li:nth-child(2) > span {padding:94px 0 96px 0}
+.section_meet_point h3 {font-size: 24px;color:#37496E;line-height: 30px;padding-left: 40px;font-weight: bold;padding-top: 32px;clear: both}
+.section_meet_point strong {font-size: 18px;line-height: 24px;color:#6C7FA6;margin: 14px 0 73px 14px}
+
+/*大会日程预览*/
+.meet_preview {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;position: relative;top: -40px}
+.table_title tr th {font-size: 17px;color: #ffffff;text-align: center;height: 40px;line-height: 40px;background:#5885B8;border-right: 2px solid #ffffff;font-weight: normal}
+.table_title tr th:nth-child(1) {background: #37496E;}
+.meet_title {margin-bottom: 25px}
+.table_boy {text-align: left;font-size: 16px;line-height: 20px;}
+.table_boy tr td {color: #6C7FA6;height:62px;border-right: 2px solid #ced8e1;}
+.table_boy tr td:last-child {border-right: none}
+.table_boy tr td span {display: inline-block;margin-left:42px}
+.table_boy tr:nth-child(even) >td {background:#f2f5fa}
+.table_boy tr td a img {display: inline-block;width: 20px;height: 20px;float: right;margin-right: 30px}
+.table_date {color:#5885B8;font-size: 30px;font-weight: bold;background:#dff1f5;text-align: center}
+.last_line td {border-bottom: 2px solid #ced8e1;}
+
+@media (max-width: 414px) {
+    .table_boy tr td span {margin-left: 0}
+    .table_boy tr td a img {margin-right: 0}
+}
+
+/*特别推荐*/
+.special_commend {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;}
+.commend_left p {font-size: 16px;line-height: 24px;color:#6C7FA6;padding-bottom: 20px;padding-left:50px;text-align: justify}
+.commend_left {margin-right: 83px}
+.table_boy_commend tr td {font-size:14px;line-height: 17px;color:#37496E;text-align: center}
+.table_boy_commend tr td em {color:#6C7FA6;font-style: normal}
+.table_boy_commend tr:nth-child(1)>td {height:75px;font-size: 30px;line-height: 36px;color: #5885B8}
+.table_boy_commend tr:nth-child(2)>td {height: 150px}
+.table_boy_commend tr:nth-child(3)>td {height: 45px}
+.table_boy_commend tr:nth-child(4)>td {height: 114px}
+
+.Commend_first span{font-size: 17px;line-height: 21px;color:#37496E;font-weight: bold;display: inline-block;float: left;margin-left: 10px;margin-top:39px}
+
+.Commend_first em {font-size: 14px;line-height: 20px;color: #6C7FA6;float: right;margin-top: 39px}
+.under_line {border-bottom: 2px solid #d1dfe8;clear: both;width: 200px;padding-top: 15px}
+.commend_second span {color: #37496E;font-size: 17px;font-weight: bold;display: inline-block;margin-top: 14px;margin-left: 10px}
+.commend_second em {font-size: 14px;color:#6C7FA6;line-height: 20px;margin-top: 12px;margin-left: 10px}
+
+@media (max-width: 768px) {
+    .commend_left p {padding: 0 20px 20px 20px}
+    .table_boy_commend tr td em {margin-right: 20px}
+}
+
+/*演讲嘉宾*/
+.guest_speaker,.join_meeting,.Traffic_guide,.Sponsorship {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;margin-top: 40px}
+.guest_speaker h2,.guest_speaker a {display: inline-block}
+.check_more {float: right;margin-top: 50px;margin-right:50px;font-size: 14px;line-height: 20px;color: #5885B8;text-decoration: none }
+
+.speaker_list {clear: both;overflow: hidden}
+.speaker_content {float: left;margin-right: 15px;margin-bottom: 15px}
+.speak_user a{display: block;float: left;}
+.speak_user_des {float:left;background:#f2f5fa;width: 190px;height: 190px;text-align: center;}
+.speak_user_des h4 {font-size:24px;line-height: 33px;font-weight: bold;color:#6C7FA6;padding-top: 47px}
+.speak_user_des span {color:#6C7FA6}
+.right_clear {margin-right: 0}
+.bottom_clear {margin-bottom: 0}
+
+@media (max-width: 768px) {
+    .speak_user_des {width: 171px;}
+    .right_clear {margin-right: 15px}
+    .bottom_clear {margin-bottom: 15px}
+}
+@media (min-width: 375px) and (max-width: 414px) {
+    .speaker_content {margin-left: 26px}
+}
+@media (min-width: 320px) and (max-width: 375px) {
+    .speak_user a img {width: 160px;}
+    .speak_user_des {width: 160px;height: 160px}
+}
+@media (max-width: 320px) {
+    .speaker_content {margin-left: 0;margin-right: 0}
+}
+
+/*注册参会*/
+.join_list li {text-align: center;background: #4586D1;}
+.join_list li h4 {font-size: 36px;line-height: 46px;color: #ffffff;margin-top: 47px}
+.join_list li span {font-size: 17px;line-height: 30px;color: #ffffff;display: block;}
+.ticket {margin-top: 19px}
+.Price_off {margin-top:36px}
+.Price_off b {font-size: 40px;font-weight: bold}
+.price_delete {text-decoration: line-through}
+.join_list li a {display: block;width: 140px;height: 43px;background:#D67900;text-align: center;line-height: 43px;color: #ffffff;font-size: 20px;margin: 40px auto;text-decoration: none}
+
+/*交通指南*/
+.traffic_right img {width: 100%;height: 490px}
+.traffic_content li a {display: block;width: 62px;height: 62px;background:#DAE9F7;border-radius: 50%;margin-right: 10px}
+.traffic_content li {overflow: hidden;margin-left: 42px;padding-bottom:36px}
+.traffic_des h3 {font-size: 20px;line-height: 25px;color: #575979;font-weight: bold;padding-bottom: 10px}
+.traffic_des p {font-size: 14px; line-height: 18px;color: #6C7FA6;text-align: left}
+@media (max-width: 414px) {
+    .traffic_right img {height: auto}
+}
