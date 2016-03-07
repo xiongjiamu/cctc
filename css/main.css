@@ -28,9 +28,6 @@ html { overflow-x: hidden; }
 .navbar-default .navbar-nav>li>a:hover {color: #ffffff}
 .navbar-nav>li {margin-right: 8px}
 #cur {background: #5DB8CF;color: #175272;font-weight: bold}
-
-
-
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
 }
@@ -41,6 +38,8 @@ html { overflow-x: hidden; }
     .navbar-nav {text-align: center}
     .navbar-nav>li a img {display: inline-block;position: absolute;top: 10px;left: -12px}
     .navbar-default .navbar-nav>li>a {display: inline-block;position: relative}
+    #cur {width: 100%}
+    .navbar-nav>li {margin-right: 0}
 }
 
 /*中间banner*/
@@ -70,11 +69,11 @@ html { overflow-x: hidden; }
 .point_list li span {display: block;padding: 102px 0}
 .point_list li:nth-child(2) {font-size: 26px;line-height: 34px}
 .point_list li:nth-child(2) > span {padding:94px 0 96px 0}
-
-.point_list_title {display: none;margin-bottom: 73px;}
+.point_list li:nth-child(1) {background: #3293ED url("../images/meet_point_icon1.png")no-repeat;background-size: 100% 100%}
+.point_list li:nth-child(3) {background: #44C79D url("../images/meet_point_icon4.png")no-repeat;background-size: 100% 100%}
+.point_list_title {display: none;}
 .point_list_title h3 {font-size: 24px;color:#37496E;line-height: 30px;padding-left: 40px;font-weight: bold;padding-top: 50px;clear: both}
 .point_list_title strong {font-size: 18px;line-height: 24px;color:#6C7FA6;margin: 14px 0 73px 32px;display: block}
-
 .point_list li img {position: absolute;width: 36px;height: 18px;display: none;left: 120px}
 .triangle-up {
     width:0;
@@ -91,6 +90,24 @@ html { overflow-x: hidden; }
 }
 .right_top {position: absolute;top: -11px;right: 0;-webkit-transform:rotate(-135deg);}
 
+#blue_content {display: block}
+.meet_point_mobile span {color:#666;font-size: 20px}
+.meet_point_mobile strong {font-size: 14px;color: #666;line-height: 23px;font-weight: normal;padding: 20px 0;display: block}
+.meet_point_mobile span {margin-top: 20px}
+.meet_point_item1 {background: #ececec;padding: 20px;margin-top: 20px}
+.meet_point_item2 {background: #ffffff;padding: 20px;}
+.meet_point_mobile {display: none}
+
+@media (max-width: 320px) {
+    .point_list_title h3 {padding-left: 20px}
+    .point_list_title strong {margin-left: 20px;text-align: left}
+}
+@media (max-width: 640px) {
+    .point_list {display: none}
+    #blue_content {display: none}
+    .meet_point_mobile {display: block}
+}
+
 
 /*大会日程预览*/
 .meet_preview {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;position: relative;top: -40px;}
@@ -105,8 +122,7 @@ html { overflow-x: hidden; }
 .table_boy tr td a img {display: inline-block;width: 20px;height: 20px;float: right;margin-right: 30px}
 .table_date {color:#5885B8;font-size: 30px;font-weight: bold;background:#dff1f5;text-align: center}
 .last_line td {border-bottom: 2px solid #ced8e1;}
-
-.pops_box {width: 200px;height: 50px;border: 1px solid black;position: absolute;z-index: 999;right: 0;top: 50px;display: none;background: #ffffff}
+.pops_box {box-shadow:0 1px 3px #ccc;position: absolute;z-index: 999;right: 0;top: 50px;display: none;background: #ffffff;font-size: 16px;color:#6C7FA6;padding: 20px}
 .meet_preview_mobile {display: none}
 .index-mobile-ctcc strong {font-size: 14px;color: #666}
 .index-mobile-ctcc p {font-size: 14px;color:#6C7FA6;display: inline-block;font-weight: bold}
