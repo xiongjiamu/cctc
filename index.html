@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse row" id="example-navbar-collapse">
                 <div class="container">
                     <ul class="nav navbar-nav">
-                        <li class="cur"><a href="#">首页</a></li>
+                        <li><a id="cur" href="#">首页</a></li>
                         <li><a href="#"><img src="images/new_icon.png"/>大会亮点</a></li>
                         <li><a href="#"><img src="images/new_icon.png"/>会议议程</a></li>
                         <li><a href="#">特别推荐</a></li>
@@ -94,23 +94,68 @@
                         </div>
                         <h2 class="col-md-12 col-sm-12 col-xs-12 meet_title">大会亮点</h2>
                         <ul class="col-md-12 col-sm-12 col-xs-12 point_list">
-                            <li class="col-md-3 col-sm-6 col-xs-12">
+                            <li style="background: #3293ED" class="col-md-3 col-sm-6 col-xs-12">
                                 <span>三大技术峰会<br>重磅来袭</span>
+                                <img src="images/Triangle_1.png"/>
+                                <div class="right_top">
+                                    <div class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
                             <li class="col-md-3 col-sm-6 col-xs-12">
                                 <span>Spark Streaming<br>开发者面对面交流<br>跨国合作，精彩分享</span>
+                                <img src="images/Triangle_2.png">
+                                <div class="right_top">
+                                    <div style="border-bottom-color:#B58800" class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
-                            <li class="col-md-3 col-sm-6 col-xs-12">
+                            <li style="background: #44C79D" class="col-md-3 col-sm-6 col-xs-12">
                                 <span>技术领袖<br>前沿观点</span>
+                                <img src="images/Triangle_4.png">
+                                <div class="right_top">
+                                    <div style="border-bottom-color:#369E7D" class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
-                            <li class="col-md-3 col-sm-6 col-xs-12">
+                            <li style="background: #68B327" class="col-md-3 col-sm-6 col-xs-12">
                                 <span>行业专家<br>实践分享</span>
+                                <img src="images/Triangle_3.png">
+                                <div class="right_top">
+                                    <div style="border-bottom-color:#4A801C" class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
                         </ul>
-                        <h3>三大技术峰会</h3>
-                        <strong class="col-md-12 col-sm-11 col-xs-11">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</strong>
-                    </div>
+                        <div class="point_list_title">
+                            <h3>三大技术峰会</h3>
+                            <strong>“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</strong>
+                        </div>
+
                 </div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        $(".point_list li").hover(function(){
+                            $(this).find("img").show().parent().siblings().find("img").hide();
+                            $('.point_list_title').show();
+                        })
+                    })
+                </script>
+
+                <script>
+                    $(function(){
+                        $(".table_boy tr td a").mouseover(function(){
+                            $(this).next().show().parent().siblings().find("div").hide();
+                            $(this).parents("tr").siblings().find("div").hide();
+
+                        })
+                        $(".table_boy tr td a").mouseleave(function(){
+                           $('.pops_box').hide();
+                        })
+                    })
+                </script>
+
                 <div class="meet_preview">
                     <h2 class="meet_title">大会日程预览</h2>
                     <table class="col-md-12 col-sm-12 col-xs-12">
@@ -125,28 +170,48 @@
                         <!--第一个表格-->
                         <tr>
                             <td style="border-right: none;border-bottom: 2px solid #ced8e1;" rowspan="5" class="table_date col-md-2 col-sm-2 col-xs-2">5.12</td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                            <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr class="last_line">
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
 
                         </tbody>
@@ -154,52 +219,129 @@
                         <tbody class="table_boy">
                         <tr>
                             <td style="border-right: none;border-bottom: 2px solid #ced8e1;" rowspan="5" class="table_date col-md-2 col-sm-2 col-xs-2">5.13</td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr class="last_line">
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         </tbody>
                         <!--第三个表格-->
                         <tbody class="table_boy">
                         <tr>
                             <td style="border-right: none;" rowspan="5" class="table_date col-md-2 col-sm-2 col-xs-2">5.14</td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>中美未来的机遇与挑战</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         <tr>
 
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
-                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="#"><img src="images/table_icon.png"/></a></td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
+                            <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
+                                <div class="pops_box">123</div>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="meet_preview_mobile col-sm-12 col-xs-12">
+                    <h2 class="meet_title">大会日程预览</h2>
+                    <div class="index-mobile-ctcc">
+                        <div class="ctcc-item1">
+                            <div class="ctcc-item-content">
+                                <strong>时间: </strong><p>5月12日(09:00-12:00)</p>
+                            </div>
+                            <div class="ctcc-item-content">
+                                <strong>内容: </strong><p>中美未来的机遇与挑战</p><br>
+                                <strong>附加内容：</strong><p>123</p>
+                            </div>
+                        </div>
+                        <div class="ctcc-item2">
+                            <div class="ctcc-item-content">
+                                <strong>时间: </strong><p>5月12日(09:00-12:00)</p>
+                            </div>
+                            <div class="ctcc-item-content">
+                                <strong>内容: </strong><p>中美未来的机遇与挑战</p><br>
+                                <strong>附加内容：</strong><p>123</p>
+                            </div>
+                        </div>
+                        <div class="ctcc-item1">
+                            <div class="ctcc-item-content">
+                                <strong>时间: </strong><p>5月12日(09:00-12:00)</p>
+                            </div>
+                            <div class="ctcc-item-content">
+                                <strong>内容: </strong><p>中美未来的机遇与挑战</p><br>
+                                <strong>附加内容：</strong><p>123</p>
+                            </div>
+                        </div>
+                        <div class="ctcc-item2">
+                            <div class="ctcc-item-content">
+                                <strong>时间: </strong><p>5月12日(09:00-12:00)</p>
+                            </div>
+                            <div class="ctcc-item-content">
+                                <strong>内容: </strong><p>中美未来的机遇与挑战</p><br>
+                                <strong>附加内容：</strong><p>123</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="special_commend">
@@ -248,6 +390,28 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="commend_right_mobile col-sm-12 col-xs-12">
+                            <div class="index-mobile-ctcc">
+                                <div class="ctcc-item1">
+                                    <div class="ctcc-item-content">
+                                        <strong>时间: </strong><p>5月14日(08:30-12:00)</p>
+                                    </div>
+                                    <div class="ctcc-item-content">
+                                        <strong>演讲嘉宾：</strong><p>尼克松</p><br/>
+                                        <strong>内容: </strong><p>全体大会全体大会</p>
+                                    </div>
+                                </div>
+                                <div class="ctcc-item2">
+                                    <div class="ctcc-item-content">
+                                        <strong>时间: </strong><p>5月14日(08:30-12:00)</p>
+                                    </div>
+                                    <div class="ctcc-item-content">
+                                        <strong>演讲嘉宾：</strong><p>尼克松</p><br/>
+                                        <strong>内容: </strong><p>全体大会全体大会</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
                 <div class="guest_speaker">
@@ -406,21 +570,33 @@
                                 <span class="ticket">不包括Spark大会门票<br>仅限参加CCTC大会<br>（5月12-13日）</span>
                                 <span class="Price_off">现价优惠<b>999</b>元</span>
                                 <span class="price_delete">原价2200元</span>
-                                <a style="box-shadow:2px 2px 2px #306baf;" href="#">立即抢购</a>
+                                <a style="box-shadow:2px 2px 2px #306baf;" href="#"><span>立即抢购</span></a>
+                                <div class="right_top">
+                                    <div style="border-bottom-color:#486793" class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
                             <li style="background:#F0B400" class="col-md-4 col-sm-6 col-xs-12">
                                 <h4>CCTC大会门票</h4>
                                 <span class="ticket">不包括Spark大会门票<br>仅限参加CCTC大会<br>（5月12-13日）</span>
                                 <span class="Price_off">现价优惠<b>999</b>元</span>
                                 <span class="price_delete">原价2200元</span>
-                                <a style="box-shadow:2px 2px 2px #c68f00" href="#">立即抢购</a>
+                                <a style="box-shadow:2px 2px 2px #c68f00" href="#"><span>立即抢购</span></a>
+                                <div class="right_top">
+                                    <div style="border-bottom-color:#486793" class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
                             <li style="background: #5DB8CF" class="col-md-4 col-sm-6 col-xs-12">
                                 <h4>CCTC大会门票</h4>
                                 <span class="ticket">不包括Spark大会门票<br>仅限参加CCTC大会<br>（5月12-13日）</span>
                                 <span class="Price_off">现价优惠<b>999</b>元</span>
                                 <span class="price_delete">原价2200元</span>
-                                <a style="box-shadow: 2px 2px 2px #4396a6" href="#">立即抢购</a>
+                                <a style="box-shadow: 2px 2px 2px #4396a6" href="#"><span>立即抢购</span></a>
+                                <div class="right_top">
+                                    <div style="border-bottom-color:#486793" class="triangle-up"></div>
+                                    <div class="triangle-down"></div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -490,17 +666,51 @@
                     <p class="col-md-3 col-sm-3 col-xs-6">票务咨询<br>010-51661202<br>cctc@csdn.net</p>
                     <a class="col-md-3 col-sm-3 col-xs-6" href="#"><img src="images/CCTC_icon.jpg"/></a>
                 </div>
-
             </div>
     </div>
     </div>
     </div>
+    <div class="buy_ticket_suspend">
+        <a href="#">
+            <img src="images/buy_ticket.png"/>
+        </a>
+        <a class="suspend_small_icon" href="#"></a>
+    </div>
+    <script src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+    <style>
+        .pub_fo {
+            background: #f1f5f8;
+            margin-top: 0;
+            border: 0;
+        }
 
+        .pub_footer_new .foot_sub_menu a {
+            color: #666666
+        }
 
+        .pub_footer_new .foot_contact span {
+            color: #666666
+        }
 
+        .pub_footer_new .foot_contact .phone {
+            color: #666666
+        }
 
+        .pub_footer_new .foot_contact .email {
+            color: #666666
+        }
 
+        .pub_footer_new .foot_contact .weibo {
+            color: #666666
+        }
 
+        .pub_footer_new .foot_contact .qq {
+            color: #666666
+        }
 
+        .pub_footer_new .foot_copyright span {
+            color: #666666
+        }
+    </style>
 </body>
 </html>

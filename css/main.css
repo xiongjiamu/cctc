@@ -21,17 +21,21 @@ html { overflow-x: hidden; }
 /*导航*/
 .navbar-default {background-color:#37496E}
 .navbar-default .navbar-nav>li>a {font-size: 18px;color: #ffffff}
-.navbar {border: none;margin-bottom: 0}
+.navbar {border: none;margin-bottom: 0;border-radius: 0}
 .navbar-default .navbar-nav>li>a {position: relative}
 .navbar-nav>li a img {position: absolute;display: block;width:22px;height: 22px;top: -10px;left: 36px}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {background-color:#37496E;color: #ffffff }
 .navbar-default .navbar-nav>li>a:hover {color: #ffffff}
 .navbar-nav>li {margin-right: 8px}
+#cur {background: #5DB8CF;color: #175272;font-weight: bold}
+
+
+
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
 }
 @media (max-width: 320px) {
-    .banner_lf span {font-size: 32px}
+    .banner_lf span {font-size: 30px}
 }
 @media (max-width: 767px) {
     .navbar-nav {text-align: center}
@@ -40,7 +44,7 @@ html { overflow-x: hidden; }
 }
 
 /*中间banner*/
-.middle_banner {width: 100%;background: #5885B8;text-align: center;}
+.middle_banner {width: 100%;background:url("../images/banner_bg.png")no-repeat;text-align: center;}
 .middle_banner h1 {font-size:72px;line-height: 108px;color: #ffffff;padding-top: 50px}
 .middle_banner p {font-size: 48px;color: #ffffff;line-height: 70px}
 .middle_banner span {font-size: 18px;color: #ffffff}
@@ -48,6 +52,9 @@ html { overflow-x: hidden; }
 @media (max-width: 414px) {
     .middle_banner h1 {font-size:28px;line-height: 70px;padding-top: 20px}
     .middle_banner p {font-size: 24px;line-height: 40px}
+}
+@media (min-width: 769px) {
+    .middle_banner {background-size:100% 100%;}
 }
 
 
@@ -59,20 +66,39 @@ html { overflow-x: hidden; }
 .meet_point_des a {font-size: 16px;color: #6C7FA6;line-height: 24px;padding-bottom: 10px}
 .meet_title {font-size: 36px;line-height:50px;color:#5885B8;margin-top:40px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;margin-left: 50px}
 .point_list {margin-top: 25px}
-.point_list li {background: #F0B400;color: #ffffff;text-align: center;font-size: 34px;font-weight: bold;line-height: 44px}
+.point_list li {background: #F0B400;color: #ffffff;text-align: center;font-size: 34px;font-weight: bold;line-height: 44px;position: relative}
 .point_list li span {display: block;padding: 102px 0}
 .point_list li:nth-child(2) {font-size: 26px;line-height: 34px}
 .point_list li:nth-child(2) > span {padding:94px 0 96px 0}
-.section_meet_point h3 {font-size: 24px;color:#37496E;line-height: 30px;padding-left: 40px;font-weight: bold;padding-top: 32px;clear: both}
-.section_meet_point strong {font-size: 18px;line-height: 24px;color:#6C7FA6;margin: 14px 0 73px 14px}
+
+.point_list_title {display: none;margin-bottom: 73px;}
+.point_list_title h3 {font-size: 24px;color:#37496E;line-height: 30px;padding-left: 40px;font-weight: bold;padding-top: 50px;clear: both}
+.point_list_title strong {font-size: 18px;line-height: 24px;color:#6C7FA6;margin: 14px 0 73px 32px;display: block}
+
+.point_list li img {position: absolute;width: 36px;height: 18px;display: none;left: 120px}
+.triangle-up {
+    width:0;
+    height:0;
+    border:24px solid transparent;
+    border-bottom-color:#0066cc;
+}
+.triangle-down {
+    width:0;
+    height:0;
+    border-left:24px solid transparent;
+    border-right:24px solid transparent;
+    border-top:24px solid #ffffff;
+}
+.right_top {position: absolute;top: -11px;right: 0;-webkit-transform:rotate(-135deg);}
+
 
 /*大会日程预览*/
-.meet_preview {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;position: relative;top: -40px}
+.meet_preview {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;position: relative;top: -40px;}
 .table_title tr th {font-size: 17px;color: #ffffff;text-align: center;height: 40px;line-height: 40px;background:#5885B8;border-right: 2px solid #ffffff;font-weight: normal}
-.table_title tr th:nth-child(1) {background: #37496E;}
+/*.table_title tr th:nth-child(1) {background: #37496E;}*/
 .meet_title {margin-bottom: 25px}
 .table_boy {text-align: left;font-size: 16px;line-height: 20px;}
-.table_boy tr td {color: #6C7FA6;height:62px;border-right: 2px solid #ced8e1;}
+.table_boy tr td {color: #6C7FA6;height:62px;border-right: 2px solid #ced8e1;position: relative}
 .table_boy tr td:last-child {border-right: none}
 .table_boy tr td span {display: inline-block;margin-left:42px}
 .table_boy tr:nth-child(even) >td {background:#f2f5fa}
@@ -80,10 +106,26 @@ html { overflow-x: hidden; }
 .table_date {color:#5885B8;font-size: 30px;font-weight: bold;background:#dff1f5;text-align: center}
 .last_line td {border-bottom: 2px solid #ced8e1;}
 
+.pops_box {width: 200px;height: 50px;border: 1px solid black;position: absolute;z-index: 999;right: 0;top: 50px;display: none;background: #ffffff}
+.meet_preview_mobile {display: none}
+.index-mobile-ctcc strong {font-size: 14px;color: #666}
+.index-mobile-ctcc p {font-size: 14px;color:#6C7FA6;display: inline-block;font-weight: bold}
+.ctcc-item1 {padding: 10px;background-color:#ececec}
+.ctcc-item2 {padding: 10px;background-color:#fff}
+.index-mobile-ctcc {color: #666;font-size: 14px}
+
+
 @media (max-width: 414px) {
     .table_boy tr td span {margin-left: 0}
     .table_boy tr td a img {margin-right: 0}
 }
+@media (max-width: 640px) {
+    .buy_ticket_suspend {display: none}
+    .meet_preview_mobile {display: block;position: relative;top: -40px;background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;}
+    .meet_preview {display: none}
+    .special_commend {clear: both}
+}
+
 
 /*特别推荐*/
 .special_commend {background: #ffffff;box-shadow:0 1px 3px #ccc;overflow: hidden;}
@@ -102,6 +144,8 @@ html { overflow-x: hidden; }
 .under_line {border-bottom: 2px solid #d1dfe8;clear: both;width: 200px;padding-top: 15px}
 .commend_second span {color: #37496E;font-size: 17px;font-weight: bold;display: inline-block;margin-top: 14px;margin-left: 10px}
 .commend_second em {font-size: 14px;color:#6C7FA6;line-height: 20px;margin-top: 12px;margin-left: 10px}
+.commend_right_mobile {display: none}
+
 
 @media (max-width: 768px) {
     .commend_left p {padding: 0 20px 20px 20px}
@@ -109,6 +153,12 @@ html { overflow-x: hidden; }
 }
 @media (min-width: 320px) and (max-width: 375px) {
     .table_boy_commend tr td em {margin-right: 40px;margin-left: 0}
+}
+
+@media (max-width: 640px) {
+    .commend_right_mobile {display: block}
+    .commend_right {display: none}
+
 }
 
 
@@ -150,7 +200,8 @@ html { overflow-x: hidden; }
 .Price_off {margin-top:36px}
 .Price_off b {font-size: 40px;font-weight: bold}
 .price_delete {text-decoration: line-through}
-.join_list li a {display: block;width: 140px;height: 43px;background:#D67900;text-align: center;line-height: 43px;color: #ffffff;font-size: 20px;margin: 40px auto;text-decoration: none}
+.join_list li a {display: block;width: 140px;height: 43px;background:#D67900;color: #ffffff;margin: 40px auto;text-decoration: none;-webkit-transform:skew(-15deg);-moz-transform:skew(-15deg)}
+.join_list li a span {-webkit-transform:skew(15deg);-moz-transform:skew(15deg);font-size: 20px;text-align: center;line-height: 43px;}
 
 /*交通指南*/
 .traffic_right img {width: 100%;height: 490px}
@@ -179,6 +230,12 @@ html { overflow-x: hidden; }
 }
 
 /*底部banner*/
-.bottom_banner {background: url("../images/bottom_banner.png")no-repeat;margin-top: 40px;text-align: center}
-.bottom_banner p {font-size: 18px;line-height: 26px;color: #ffffff;margin-top: 40px}
+.bottom_banner {background: url("../images/bottom_banner.png")no-repeat;margin-top: 40px;text-align: center;margin-bottom: 50px}
+.bottom_banner p {font-size: 18px;line-height: 26px;color: #ffffff;margin: 40px 0 50px 0}
 .bottom_banner a img {margin-top:58px;}
+
+/*悬浮*/
+.buy_ticket_suspend {position: fixed;z-index: 900;right: 10px;bottom: 10px}
+.buy_ticket_suspend img {display: block;width: 176px;height: 176px}
+.buy_ticket_suspend img:nth-child(2) {width:48px;height: 48px}
+.suspend_small_icon {display: block;width: 48px;height: 48px;background: gray;border-radius: 50%;margin: 0 auto;margin-top: 20px}
