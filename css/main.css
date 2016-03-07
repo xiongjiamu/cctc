@@ -102,10 +102,13 @@ html { overflow-x: hidden; }
     .point_list_title h3 {padding-left: 20px}
     .point_list_title strong {margin-left: 20px;text-align: left}
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .point_list {display: none}
     #blue_content {display: none}
     .meet_point_mobile {display: block}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .point_list li:nth-child(2) > span {padding: 58px 0 30px 0}
 }
 
 
@@ -122,7 +125,7 @@ html { overflow-x: hidden; }
 .table_boy tr td a img {display: inline-block;width: 20px;height: 20px;float: right;margin-right: 30px}
 .table_date {color:#5885B8;font-size: 30px;font-weight: bold;background:#dff1f5;text-align: center}
 .last_line td {border-bottom: 2px solid #ced8e1;}
-.pops_box {box-shadow:0 1px 3px #ccc;position: absolute;z-index: 999;right: 0;top: 50px;display: none;background: #ffffff;font-size: 16px;color:#6C7FA6;padding: 20px}
+.pops_box {position: absolute;z-index: 999;right: 0;top: 50px;display: none;background: #ffffff;font-size: 16px;color:#6C7FA6;padding: 20px;border: 1px solid #5885B8}
 .meet_preview_mobile {display: none}
 .index-mobile-ctcc strong {font-size: 14px;color: #666}
 .index-mobile-ctcc p {font-size: 14px;color:#6C7FA6;display: inline-block;font-weight: bold}
@@ -254,4 +257,7 @@ html { overflow-x: hidden; }
 .buy_ticket_suspend {position: fixed;z-index: 900;right: 10px;bottom: 10px}
 .buy_ticket_suspend img {display: block;width: 176px;height: 176px}
 .buy_ticket_suspend img:nth-child(2) {width:48px;height: 48px}
-.suspend_small_icon {display: block;width: 48px;height: 48px;background: gray;border-radius: 50%;margin: 0 auto;margin-top: 20px}
+.suspend_small_icon {display: block;width: 48px;height: 48px;background: gray;border-radius: 50%;margin: 0 auto;margin-top: 20px;text-align: center;line-height: 45px}
+.suspend_small_icon img {width: 26px;height: 26px;display: inline-block}
+.big_code {width: 176px;height:176px;background: #51DBC2;border-radius: 50%;border: none;display: block;line-height: 176px;text-align: center}
+.big_code img {display: inline-block;width: 100px;height: 100px;background: black;}

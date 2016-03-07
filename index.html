@@ -248,7 +248,7 @@
                         <tr>
 
                             <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
-                                <div class="pops_box">123</div>
+                                <div class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
                             </td>
                             <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
                                 <div class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
@@ -334,19 +334,19 @@
                         <tr>
 
                             <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
-                                <div class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
+                                <div style="top: -90px" class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
                             </td>
                             <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
-                                <div class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
+                                <div style="top: -90px" class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
                             </td>
                         </tr>
                         <tr>
 
                             <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
-                                <div class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
+                                <div style="top: -90px" class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
                             </td>
                             <td class="col-md-5 col-sm-5 col-xs-5"><span>Container技术峰会</span><a href="javascript:;"><img src="images/table_icon.png"/></a>
-                                <div class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
+                                <div style="top: -90px" class="pops_box">“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</div>
                             </td>
                         </tr>
                         </tbody>
@@ -724,8 +724,22 @@
         <a href="#">
             <img src="images/buy_ticket.png"/>
         </a>
-        <a class="suspend_small_icon" href="#"></a>
+        <a class="suspend_small_icon" href="#"><img src="images/Combined_Shape.png"/></a>
+        <a style="display: none" class="big_code" href="#"><img src="images/Combined_Shape.png"/></a>
     </div>
+    <script>
+        $(function(){
+            $(".suspend_small_icon").mouseover(function(){
+                $(this).hide();
+                $('.big_code').show()
+            })
+            $(".big_code").mouseleave(function(){
+                $(this).hide();
+                $('.suspend_small_icon').show();
+            })
+        })
+    </script>
+
     <script src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
     <style>
         .pub_fo {
