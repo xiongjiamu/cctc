@@ -28,6 +28,7 @@ html { overflow-x: hidden; }
 .navbar-default .navbar-nav>li>a:hover {color: #ffffff}
 .navbar-nav>li {margin-right: 8px}
 #cur {background: #5DB8CF;color: #175272;font-weight: bold}
+.navbar-default .navbar-collapse {border: none}
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
 }
@@ -92,11 +93,20 @@ html { overflow-x: hidden; }
 
 #blue_content {display: block}
 .meet_point_mobile span {color:#666;font-size: 20px}
-.meet_point_mobile strong {font-size: 14px;color: #666;line-height: 23px;font-weight: normal;padding: 20px 0;display: block}
+.meet_point_mobile strong {font-size: 14px;color: #666;line-height: 23px;font-weight: normal;padding: 5px 0;display: block}
 .meet_point_mobile span {margin-top: 20px}
 .meet_point_item1 {background: #ececec;padding: 20px;margin-top: 20px}
 .meet_point_item2 {background: #ffffff;padding: 20px;}
 .meet_point_mobile {display: none}
+
+.point_banner01 {background:#3293ED url("../images/meet_point_icon1.png")no-repeat;background-size: 100% 100%;text-align: center;font-size: 30px;font-weight: bold;line-height: 44px;margin-bottom: 20px;position: relative}
+.point_banner01 span {display: block;padding: 65px 0;color: #ffffff;}
+#green_banner {background: #44C79D url("../images/meet_point_icon4.png")no-repeat;background-size: 100% 100%;position: relative}
+
+@media (max-width: 414px) {
+    .meet_title {margin-left: 0;text-align: center;background-position: center;}
+    #check_more_mobile  {text-align: right;margin: 0 15px 20px 0}
+}
 
 @media (max-width: 320px) {
     .point_list_title h3 {padding-left: 20px}
