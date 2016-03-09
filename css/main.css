@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input,em { margin: 0; padding: 0;color: #ffffff;}
-body { font-size: 12px; line-height:2em; font-family:'Microsoft Yahei';background: #fafafa;}
+body { font-size: 12px; line-height:2em; font-family:'Microsoft Yahei';background: #f1f5f8;}
 ul, ol { list-style-type: none; }
 select, input, img { vertical-align: middle; outline: none; border:none; }
 a,a:hover{text-decoration: none; outline: none;color: #205081}
@@ -31,6 +31,9 @@ html { overflow-x: hidden; }
 .navbar-nav>li {margin-right: 8px}
 #cur {background: #5DB8CF;color: #175272;font-weight: bold}
 .navbar-default .navbar-collapse {border: none}
+
+.navbar-fixed-top {top: 8px}
+
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
 }
@@ -206,7 +209,7 @@ html { overflow-x: hidden; }
 .speaker_list {clear: both;overflow: hidden}
 .speaker_content {float: left;margin-right: 15px;margin-bottom: 15px}
 .speak_user a{display: block;float: left;}
-.speak_user_des {float:left;background:#f2f5fa;width: 190px;height: 190px;text-align: center;}
+.speak_user_des {float:left;background:#f2f5fa;width: 191px;height: 190px;text-align: center;}
 .speak_user_des h4 {font-size:24px;line-height: 33px;font-weight: bold;color:#6C7FA6;padding-top: 47px}
 .speak_user_des span {color:#6C7FA6}
 .right_clear {margin-right: 0}
@@ -294,5 +297,57 @@ html { overflow-x: hidden; }
 .buy_ticket_suspend img:nth-child(2) {width:48px;height: 48px}
 .suspend_small_icon {display: block;width: 48px;height: 48px;background: gray;border-radius: 50%;margin: 0 auto;margin-top: 20px;text-align: center;line-height: 45px}
 .suspend_small_icon img {width: 26px;height: 26px;display: inline-block}
-.big_code {width: 176px;height:176px;background: #51DBC2;border-radius: 50%;border: none;display: block;line-height: 176px;text-align: center}
-.big_code img {display: inline-block;width: 100px;height: 100px;background: black;}
+.big_code {width: 192px;height:192px;border: none;display: block;line-height: 176px;text-align: center}
+.big_code img {width: 100%}
+
+/*二级嘉宾详情*/
+.guest_detail {width: 100%;background: #f1f5f8;}
+.guest_detail h2 {font-size: 36px;line-height:50px;color:#5885B8;margin-top:25px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;margin-left: 50px}
+.guest_detail_title {font-size: 24px;line-height: 33px;color: #5885B8;margin-top: 34px}
+.guest_detail_content_lf {clear: both;margin: 54px 0 0 20px}
+.guest_detail_content_lf img {width: 100%}
+.guest_detail_content_rt {margin-top: 54px}
+.guest_detail_content_rt h3 {font-size: 24px;line-height: 33px;color:#6C7FA6;}
+.guest_detail_content_rt span {font-size: 18px;color: #5885B8;line-height: 25px;margin: 16px 0 20px 0;display: block}
+.guest_detail_content_rt p {font-size: 16px;line-height: 24px;color:#6C7FA6;margin: 51px 0 70px 0;text-align: justify}
+.bottom_line {border-bottom: 1px solid #d5d8e1}
+.guest_second_title {overflow: hidden;margin-bottom: 24px}
+.guest_second_title span {margin-top: 0;margin-bottom: 0;font-size: 16px;line-height: 30px;color:#37496E;font-weight: bold;}
+.guest_second_title h3 {font-size: 16px;line-height: 30px;color:#5885B8;background: url("../images/title-background.png")no-repeat;background-size: 64px 30px;background-position:20px 1px;}
+.guest_detail_content {background: #ffffff;box-shadow:0 1px 3px #ccc}
+
+@media (max-width: 414px) {
+    .guest_detail h2 {text-align: center;margin-left: 0;background-position: center}
+    .guest_detail_title {text-align: center}
+    .guest_second_title h3 {text-align: center;background-position: center}
+    .guest_second_title span {margin-top: 15px}
+}
+
+/*二级嘉宾*/
+.second_guest_content {background: #ffffff;box-shadow:0 1px 3px #ccc}
+.select_title {margin-bottom:23px;margin-top: 30px}
+.select_title a {display: inline-block;font-size: 24px;line-height: 70px;color:#5885B8;height: 70px;text-align: center;text-decoration: none;border-right: 2px solid #ffffff;background: #F7F9FC;position: relative}
+.select_content h2 {font-size: 36px;line-height:50px;color:#5885B8;margin-top:25px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;margin-left: 50px}
+#select_content_left,#select_content_second,#select_content_second_02,#select_content_left_02,#select_content_second_03,#select_content_left_03 {margin-left: 35px;margin-bottom: 25px}
+
+.triangle-down_01 {
+    position: absolute;
+    bottom: -11px;
+    left: 180px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #DFE9F5;
+}
+
+@media (max-width: 768px) {
+    .triangle-down {left: 106px;}
+}
+
+@media (min-width: 769px) {
+    .speaker_content:nth-child(3),.speaker_content:nth-child(6) {margin-right: 0}
+}
+
+
+
