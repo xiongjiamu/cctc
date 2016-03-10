@@ -25,14 +25,14 @@ html { overflow-x: hidden; }
 .navbar-default .navbar-nav>li>a {font-size: 18px;color: #ffffff}
 .navbar {border: none;margin-bottom: 0;border-radius: 0}
 .navbar-default .navbar-nav>li>a {position: relative}
-.navbar-nav>li a img {position: absolute;display: block;width:22px;height: 22px;top: -10px;left: 36px}
+.navbar-nav>li a img {position: absolute;display: block;width:22px;height: 22px;top: 14px;left: 90px}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {background-color:#37496E;color: #ffffff }
-.navbar-default .navbar-nav>li>a:hover {color: #ffffff}
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:link {color: #ffffff}
 .navbar-nav>li {margin-right: 8px}
 #cur {background: #5DB8CF;color: #175272;font-weight: bold}
 .navbar-default .navbar-collapse {border: none}
 
-.navbar-fixed-top {top: 8px}
+#scroll_active {color: yellow}
 
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
@@ -58,8 +58,8 @@ html { overflow-x: hidden; }
     .middle_banner h1 {font-size:28px;line-height: 70px;padding-top: 20px}
     .middle_banner p {font-size: 24px;line-height: 40px}
 }
-@media (min-width: 769px) {
-    .middle_banner {background-size:100% 100%;}
+@media (min-width: 414px) {
+    .middle_banner {background-size:1920px 620px;}
 }
 
 
@@ -68,7 +68,8 @@ html { overflow-x: hidden; }
 .section_meet_point {background: #ffffff;height: 100%;position: relative;top: -80px;box-shadow:0 1px 3px #ccc;overflow: hidden}
 .section_meet_point p {font-size: 16px;color: #6C7FA6;line-height: 24px;padding:50px 50px 24px 50px}
 .meet_point_des {padding:0 50px 0 60px}
-.meet_point_des a {font-size: 16px;color: #6C7FA6;line-height: 24px;padding-bottom: 10px}
+.meet_point_des a {font-size: 16px;color: #6C7FA6;line-height: 24px;padding-bottom: 10px;text-decoration: none}
+.meet_point_des a:hover {text-decoration: underline;color: #3371B8}
 .meet_title {font-size: 36px;line-height:50px;color:#5885B8;margin-top:40px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;margin-left: 50px}
 .point_list {margin-top: 25px}
 .point_list li {background: #F0B400;color: #ffffff;text-align: center;font-size: 34px;font-weight: bold;line-height: 44px;position: relative}
@@ -84,15 +85,15 @@ html { overflow-x: hidden; }
 .triangle-up {
     width:0;
     height:0;
-    border:24px solid transparent;
+    border:21px solid transparent;
     border-bottom-color:#0066cc;
 }
 .triangle-down {
     width:0;
     height:0;
-    border-left:24px solid transparent;
-    border-right:24px solid transparent;
-    border-top:24px solid #ffffff;
+    border-left:21px solid transparent;
+    border-right:22px solid transparent;
+    border-top:22px solid #ffffff;
 }
 .right_top {position: absolute;top: -11px;right: 0;-webkit-transform:rotate(-135deg);}
 
@@ -140,8 +141,8 @@ html { overflow-x: hidden; }
 .table_boy tr td a img {display: inline-block;width: 20px;height: 20px;float: right;margin-right: 30px}
 .table_date {color:#5885B8;font-size: 30px;font-weight: bold;background:#E9F1F8 url("../images/table_bg.png")repeat;text-align: center}
 .last_line td {border-bottom: 2px solid #ced8e1;}
-.pops_box {position: absolute;z-index: 999;right: 0;top: 60px;display: none;background: #ffffff;font-size: 16px;color:#2d3246;padding: 20px;border: 1px solid #cedcec;border-radius: 3px;text-align: justify;}
-.pops_box img {position: absolute;top: -12px;right: 44px}
+.pops_box {position: absolute;z-index: 999;right: 0;top: 49px;display: none;background: #ffffff;font-size: 16px;color:#2d3246;padding: 20px;border: 1px solid #cedcec;border-radius: 3px;text-align: justify;}
+.pops_box img {position: absolute;top: -7px;right: 49px;width: 12px}
 
 
 .meet_preview_mobile {display: none}
@@ -269,7 +270,7 @@ html { overflow-x: hidden; }
 }
 
 /*底部banner*/
-.bottom_banner {background: url("../images/bottom_banner.png")no-repeat;margin-top: 40px;text-align: left;margin-bottom: 50px}
+.bottom_banner {background: url("../images/bottom_banner.png")no-repeat;margin-top: 40px;text-align: left;margin-bottom: 50px;background-size: 100% 100%}
 .bottom_banner p {font-size: 18px;line-height: 26px;color: #ffffff;margin: 40px 0 50px 0}
 .bottom_banner_icon {margin:40px 0 50px 0;text-align: right}
 .bottom_banner_icon img {width: 187px;height: 78px}
@@ -282,9 +283,13 @@ html { overflow-x: hidden; }
     #contact_us_first,#contact_us_iPad {margin-left: 0;text-align: center}
     .bottom_banner p {margin-bottom: 15px}
     .bottom_banner_icon {text-align: center}
+
+
 }
 
-@media (min-width: 414px) and (max-width: 768px) {
+
+
+@media (min-width: 415px) and (max-width: 768px) {
     .bottom_banner {text-align: center}
     #contact_us_iPad {margin-left: 40px}
     .bottom_banner_icon {text-align: center}
