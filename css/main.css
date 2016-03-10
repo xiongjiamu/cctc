@@ -29,10 +29,10 @@ html { overflow-x: hidden; }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {background-color:#37496E;color: #ffffff }
 .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:link {color: #ffffff}
 .navbar-nav>li {margin-right: 8px}
-#cur {background: #5DB8CF;color: #175272;font-weight: bold}
+#cur {background: #5DB8CF;color: #465D81;font-weight: bold}
 .navbar-default .navbar-collapse {border: none}
 
-#scroll_active {color: yellow}
+.navbar-default .navbar-nav>li>a:hover {background: #5DB8CF}
 
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
@@ -122,6 +122,7 @@ html { overflow-x: hidden; }
     .point_list {display: none}
     #blue_content {display: none}
     .meet_point_mobile {display: block}
+    .meet_point_mobile span {padding-top: 50px}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .point_list li:nth-child(2) > span {padding: 58px 0 30px 0}
@@ -212,7 +213,7 @@ html { overflow-x: hidden; }
 .speak_user a{display: block;float: left;}
 .speak_user_des {float:left;background:#f2f5fa;width: 191px;height: 190px;text-align: center;}
 .speak_user_des h4 {font-size:24px;line-height: 33px;font-weight: bold;color:#6C7FA6;padding-top: 47px}
-.speak_user_des span {color:#6C7FA6}
+.speak_user_des span {color:#6C7FA6;font-size: 18px;padding-top: 14px;display: block}
 .right_clear {margin-right: 0}
 .bottom_clear {margin-bottom: 0}
 
@@ -274,17 +275,18 @@ html { overflow-x: hidden; }
 .bottom_banner p {font-size: 18px;line-height: 26px;color: #ffffff;margin: 40px 0 50px 0}
 .bottom_banner_icon {margin:40px 0 50px 0;text-align: right}
 .bottom_banner_icon img {width: 187px;height: 78px}
-
-
 #contact_us_first {margin-left: 40px}
 
 @media (max-width: 414px) {
-    .bottom_banner {text-align: center;background-repeat: repeat-y}
+    .bottom_banner {text-align: center;background:url("../images/bottom_banner_640.png")no-repeat}
     #contact_us_first,#contact_us_iPad {margin-left: 0;text-align: center}
-    .bottom_banner p {margin-bottom: 15px}
-    .bottom_banner_icon {text-align: center}
-
-
+    .bottom_banner p {margin-bottom: 15px;font-size: 14px;line-height: 23px;margin-top: 20px}
+    .bottom_banner_icon {text-align: center;margin:10px 0 35px 0}
+    .bottom_banner_icon img {display: inline-block;width: 30%;height: 30%}
+    #bottom_banner_nav .col-xs-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 
@@ -297,9 +299,11 @@ html { overflow-x: hidden; }
 }
 
 /*悬浮*/
-.buy_ticket_suspend {position: fixed;z-index: 900;right: 10px;bottom: 10px}
+.buy_ticket_suspend {position: fixed;z-index: 900;right: 50px;bottom: 40px;display: none}
 .buy_ticket_suspend img {display: block;width: 176px;height: 176px}
-.buy_ticket_suspend img:nth-child(2) {width:48px;height: 48px}
+.buy_ticket_suspend img:nth-child(3){width:48px;height: 48px}
+.backtotop img {display:none;width: 48px;height: 48px;margin: 0 auto 20px}
+
 .suspend_small_icon {display: block;width: 48px;height: 48px;background: gray;border-radius: 50%;margin: 0 auto;margin-top: 20px;text-align: center;line-height: 45px}
 .suspend_small_icon img {width: 26px;height: 26px;display: inline-block}
 .big_code {width: 192px;height:192px;border: none;display: block;line-height: 176px;text-align: center}
@@ -329,11 +333,16 @@ html { overflow-x: hidden; }
 }
 
 /*二级嘉宾*/
-.second_guest_content {background: #ffffff;box-shadow:0 1px 3px #ccc}
+.second_guest_content ,.second_schedule_content{background: #ffffff;box-shadow:0 1px 3px #ccc}
 .select_title {margin-bottom:23px;margin-top: 30px}
-.select_title a {display: inline-block;font-size: 24px;line-height: 70px;color:#5885B8;height: 70px;text-align: center;text-decoration: none;border-right: 2px solid #ffffff;background: #F7F9FC;position: relative}
+.select_title_01 {display: inline-block;font-size: 24px;line-height: 70px;color:#5885B8;height: 70px;text-align: center;text-decoration: none;border-right: 2px solid #ffffff;background: #F7F9FC;position: relative}
+.select_title a {text-decoration: none}
+
+.select_title a:hover {background:#DFE9F5 }
+
+
 .select_content h2 {font-size: 36px;line-height:50px;color:#5885B8;margin-top:25px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;margin-left: 50px}
-#select_content_left,#select_content_second,#select_content_second_02,#select_content_left_02,#select_content_second_03,#select_content_left_03 {margin-left: 35px;margin-bottom: 25px}
+#select_content_left,#select_content_second,#select_content_second_02,#select_content_left_02,#select_content_second_03,#select_content_left_03,#select_content_left_mobile,#select_content_second_mobile {margin-left: 35px;margin-bottom: 25px}
 
 .triangle-down_01 {
     position: absolute;
@@ -345,14 +354,67 @@ html { overflow-x: hidden; }
     border-right: 12px solid transparent;
     border-top: 12px solid #DFE9F5;
 }
+.second_guest_mobile {display: none}
+.guest_section_title {font-size: 24px;line-height: 70px;color:#5885B8;height: 70px;text-align: center;}
+.second_guest_mobile h2 {font-size: 36px;line-height:50px;color:#5885B8;margin-top:25px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:center;text-align: center}
+.second_guest_mobile p {font-size: 24px;line-height: 33px;color: #5885B8;margin-top: 15px;text-align: center}
+.speak_user_second a img {width: 100%}
+.speak_user_second {overflow: hidden;margin-bottom: 15px}
+.speaker_content_mobile {margin-top: 20px;}
+.speak_user_des_mobile h4 {font-size: 24px;line-height: 33px;font-weight: bold;color:#6C7FA6;}
+.speak_user_des_mobile {background:#f2f5fa;text-align: center;height:auto;}
+.speak_user_des_mobile span {font-size: 18px;color: #6C7FA6;}
 
 @media (max-width: 768px) {
-    .triangle-down {left: 106px;}
+    .triangle-down_01 {left: 106px;}
 }
 
 @media (min-width: 769px) {
     .speaker_content:nth-child(3),.speaker_content:nth-child(6) {margin-right: 0}
 }
 
+@media (max-width: 414px) {
+    .second_guest {display: none}
+    .second_guest_mobile {display: block}
+    body {background: #ffffff}
+    .speak_user {margin-bottom: 15px;overflow: hidden}
+    .speak_user_des_mobile span {;display:block;padding-bottom: 41px}
+    .speak_user_des_mobile h4 {margin-top: 40px}
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .speak_user_des_mobile h4 {margin-top: 22px}
+}
+
+@media (max-width: 320px) {
+    .speak_user_des_mobile span {padding-bottom: 13px}
+    .speak_user_des_mobile h4 {margin-top: 22px}
+}
+
+
+/*二级日程*/
+.schedule_table_content h2 {font-size: 36px;line-height:50px;color:#5885B8;margin-top:25px;background: url("../images/title-background.png")no-repeat;background-size: 144px 50px;background-position:20px 1px;text-align: left;margin-left:50px;margin-bottom: 28px}
+.schedule_table_content span {font-size: 17px;line-height: 28px;color:#6C7FA6;display: block;margin-left: 50px}
+.schedule_table_title tr th {font-size:17px;line-height: 40px;height: 40px;background: #5885B8;text-align: center;border-right: 2px solid #ffffff;font-weight: normal}
+.schedule_table {margin-top: 50px}
+.schedule_table_content tr td {font-size:16px;line-height: 62px;color: #6C7FA6;height: 62px;text-align: center;border-right: 2px solid #ffffff}
+.schedule_table_content tr td span {text-align: left;margin-left: 69px}
+.schedule_table_content tr {background: url("../images/table_bg.png")repeat}
+.schedule_table_content tr:nth-child(even) {background: #f2f5fa url("../images/table_bg.png")repeat}
+.second_schedule_mobile {display: none}
+.schedule_table_mobile span {font-size: 14px;color:#6C7FA6;font-weight: bold}
+.schedule_table_mobile span b {color:#666}
+.table_sc_01 {background: #ececec;padding: 10px}
+.table_sc_02 {background: #ffffff;padding: 10px}
+
+@media (max-width: 414px) {
+    .second_schedule_mobile {display: block}
+    .second_schedule {display: none}
+    .schedule_table_content h2 {margin-left: 0;text-align: center;background-position:center}
+    .schedule_table_content span {margin-left: 0}
+}
+
+
+.change_bg {background:#DFE9F5}
 
 

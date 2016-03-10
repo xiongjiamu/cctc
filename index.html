@@ -20,11 +20,11 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
-                            <div class="banner_lf col-md-4 col-sm-6 col-xs-12">
+                            <div class="banner_lf col-md-5 col-sm-6 col-xs-12">
                                 <img src="images/CCTC_cloud.png"/>
                                 <!--<span>中国云计算技术大会</span>-->
                             </div>
-                            <div class="banner_rt col-md-8 col-sm-6 col-xs-12">
+                            <div class="banner_rt col-md-7 col-sm-6 col-xs-12">
                                 <span><img src="images/time.png"/>2016年5月13-14日</span>
                                 <span><img src="images/map.png">北京</span>
                             </div>
@@ -64,8 +64,17 @@
                 </div>
             </div>
         </nav>
+        <script>
+            //去除默认的选中
+            $(function(){
+                $('.navbar-default .navbar-nav>li>a').mouseover(function(){
+                    $(' .navbar-default .navbar-nav>li>a').removeAttr('id');
+                })
+            })
+        </script>
 
         <script>
+            //悬浮特效
             $(document).ready(function(){
                 $(window).scroll(function(){
                     var TopWidth = $(document).scrollTop();
@@ -77,58 +86,66 @@
                     var TrafficGuide = $('.Traffic_guide').offset().top -200;
                     var Sponsorship = $('.Sponsorship').offset().top -200;
                     var bottom_banner = $('.bottom_banner').offset().top -700;
+                    var docWidth = document.body.offsetWidth;
 
-                    if(TopWidth > MeetPoint){
+                    if(docWidth>769){
+                        if(TopWidth > MeetPoint){
                             $('.meet_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }
-                    else {
+                            $('.buy_ticket_suspend').show();
+
+                        }
+                        else {
                             $('.meet_nav').removeAttr("id");
-                    }
+                            $('.buy_ticket_suspend').hide();
+                        }
 
-                    if(TopWidth > MeetPreview){
+                        if(TopWidth > MeetPreview){
                             $('.preview_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
+                        }else{
                             $('.preview_nav').removeAttr("id");
-                    }
+                        }
 
-                    if(TopWidth > SpecialCommend){
-                        $('.special_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
-                        $('.special_nav').removeAttr("id");
-                    }
+                        if(TopWidth > SpecialCommend){
+                            $('.special_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
+                            $('.backtotop img').css('display','block');
+                        }else{
+                            $('.special_nav').removeAttr("id");
+                            $('.backtotop img').css('display','none');
+                        }
 
-                    if(TopWidth > GuestSpeaker){
-                        $('.guest_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
-                        $('.guest_nav').removeAttr("id");
-                    }
+                        if(TopWidth > GuestSpeaker){
+                            $('.guest_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
+                        }else{
+                            $('.guest_nav').removeAttr("id");
+                        }
 
-                    if(TopWidth > JoinMeeting){
-                        $('.join_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
-                        $('.join_nav').removeAttr("id");
-                    }
+                        if(TopWidth > JoinMeeting){
+                            $('.join_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
+                        }else{
+                            $('.join_nav').removeAttr("id");
+                        }
 
-                    if(TopWidth > TrafficGuide){
-                        $('.Traffic_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
-                        $('.Traffic_nav').removeAttr("id");
-                    }
+                        if(TopWidth > TrafficGuide){
+                            $('.Traffic_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
+                        }else{
+                            $('.Traffic_nav').removeAttr("id");
+                        }
 
-                    if(TopWidth > Sponsorship){
-                        $('.Sponsor_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
-                        $('.Sponsor_nav').removeAttr("id");
-                    }
+                        if(TopWidth > Sponsorship){
+                            $('.Sponsor_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
+                        }else{
+                            $('.Sponsor_nav').removeAttr("id");
+                        }
 
-                    if(TopWidth == 0) {
-                        $('.index').attr("id","cur");
-                    }
+                        if(TopWidth == 0) {
+                            $('.index').attr("id","cur");
+                        }
 
-                    if(TopWidth > bottom_banner){
-                        $('.bottom_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
-                    }else{
-                        $('.bottom_nav').removeAttr("id");
+                        if(TopWidth > bottom_banner){
+                            $('.bottom_nav').attr("id","cur").parent().siblings().find("a").removeAttr("id");
+                        }else{
+                            $('.bottom_nav').removeAttr("id");
+                        }
                     }
 
                     if(TopWidth > 50){
@@ -232,54 +249,54 @@
                         </ul>
                             <div class="meet_point_mobile col-sm-12 col-xs-12">
                                 <div class="meet_point_item1 col-xs-12">
-                                    <div class="point_banner01">
+                                    <div class="point_banner01 col-sm-6">
                                         <span>行业专家<br>实践分享</span>
                                         <div class="right_top">
                                             <div style="border-bottom-color:#0066cc" class="triangle-up"></div>
                                             <div style="border-top:24px solid #ececec" class="triangle-down"></div>
                                         </div>
                                     </div>
-                                    <span>三大技术峰会,重磅来袭</span>
-                                    <div>
+                                    <span class="col-sm-6">三大技术峰会,重磅来袭</span>
+                                    <div class="col-sm-6">
                                         <strong>“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</strong></div>
                                 </div>
 
                                 <div class="meet_point_item2 col-xs-12">
-                                    <div style="background: #F0B400" class="point_banner01">
+                                    <div style="background: #F0B400" class="point_banner01 col-sm-6">
                                         <span>行业专家<br>实践分享</span>
                                         <div class="right_top">
                                             <div style="border-bottom-color:#B58800" class="triangle-up"></div>
                                             <div class="triangle-down"></div>
                                         </div>
                                     </div>
-                                    <span>三大技术峰会,重磅来袭</span>
-                                    <div>
+                                    <span class="col-sm-6">三大技术峰会,重磅来袭</span>
+                                    <div class="col-sm-6">
                                         <strong>“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</strong></div>
                                 </div>
 
                                 <div class="meet_point_item1 col-xs-12">
-                                    <div id="green_banner" class="point_banner01">
+                                    <div id="green_banner" class="point_banner01 col-sm-6">
                                         <span>行业专家<br>实践分享</span>
                                         <div class="right_top">
                                             <div style="border-bottom-color:#369E7D" class="triangle-up"></div>
                                             <div style="border-top:24px solid #ececec" class="triangle-down"></div>
                                         </div>
                                     </div>
-                                    <span>三大技术峰会,重磅来袭</span>
-                                    <div>
+                                    <span class="col-sm-6">三大技术峰会,重磅来袭</span>
+                                    <div class="col-sm-6">
                                         <strong>“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</strong></div>
                                 </div>
 
                                 <div class="meet_point_item2 col-xs-12">
-                                    <div style="background:#68B327 " class="point_banner01">
+                                    <div style="background:#68B327 " class="point_banner01 col-sm-6">
                                         <span>行业专家<br>实践分享</span>
                                         <div class="right_top">
                                             <div style="border-bottom-color:#4A801C" class="triangle-up"></div>
                                             <div class="triangle-down"></div>
                                         </div>
                                     </div>
-                                    <span>三大技术峰会,重磅来袭</span>
-                                    <div>
+                                    <span class="col-sm-6">三大技术峰会,重磅来袭</span>
+                                    <div class="col-sm-6">
                                         <strong>“中国OpenStack技术峰会”、“中国Spark技术峰会”、“Container技术峰会”三大技术实践峰会带来行业内顶尖技术分享</strong></div>
                                 </div>
                             </div>
@@ -599,11 +616,11 @@
                 <div id="guest_speaker_nav" class="guest_speaker">
                     <div class="row">
                         <h2 class="meet_title col-xs-12 col-md-10 col-sm-9">演讲嘉宾</h2>
-                        <a href="second_guest.html" id="check_more_mobile" class="check_more col-xs-12 col-md-2 col-sm-3">查看更多</a>
+                        <a href="#" id="check_more_mobile" class="check_more col-xs-12 col-md-2 col-sm-3">查看更多</a>
                             <div class="speaker_list">
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -612,7 +629,7 @@
                                 </div>
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -621,7 +638,7 @@
                                 </div>
                                 <div class="speaker_content right_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -631,7 +648,7 @@
 
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -640,7 +657,7 @@
                                 </div>
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -649,7 +666,7 @@
                                 </div>
                                 <div  class="speaker_content right_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -659,7 +676,7 @@
 
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -668,7 +685,7 @@
                                 </div>
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -677,7 +694,7 @@
                                 </div>
                                 <div class="speaker_content right_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -687,7 +704,7 @@
 
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -696,7 +713,7 @@
                                 </div>
                                 <div class="speaker_content">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -705,7 +722,7 @@
                                 </div>
                                 <div class="speaker_content right_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -715,7 +732,7 @@
 
                                 <div class="speaker_content bottom_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -724,7 +741,7 @@
                                 </div>
                                 <div class="speaker_content bottom_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -733,7 +750,7 @@
                                 </div>
                                 <div class="speaker_content right_clear bottom_clear">
                                     <div class="speak_user">
-                                        <a href="guest_details.html"><img src="images/head_icon.jpg"/></a>
+                                        <a href="#"><img src="images/head_icon.jpg"/></a>
                                         <div class="speak_user_des">
                                             <h4>蒋涛</h4>
                                             <span>CSDN创始人<br>极客帮创始人</span>
@@ -843,9 +860,9 @@
             </div>
             <div id="bottom_banner_nav" class="bottom_banner">
                 <div class="row">
-                    <p id="contact_us_first" class="col-md-3 col-sm-5 col-xs-12">联系我们<br>010-51661202<br>cctc@csdn.net</p>
-                    <p class="col-md-3 col-sm-6 col-xs-12">商务合作<br>010-51661202<br>cctc@csdn.net</p>
-                    <p id="contact_us_iPad" class="col-md-2 col-sm-5 col-xs-12">票务咨询<br>010-51661202<br>cctc@csdn.net</p>
+                    <p id="contact_us_first" class="col-md-3 col-sm-5 col-xs-4">联系我们<br>010-51661202<br>cctc@csdn.net</p>
+                    <p class="col-md-3 col-sm-6 col-xs-4">商务合作<br>010-51661202<br>cctc@csdn.net</p>
+                    <p id="contact_us_iPad" class="col-md-2 col-sm-5 col-xs-4">票务咨询<br>010-51661202<br>cctc@csdn.net</p>
                     <div class="bottom_banner_icon col-md-3 col-sm-6 col-xs-12">
                         <img src="images/banner_bottom.png"/>
                     </div>
@@ -855,6 +872,7 @@
     </div>
     </div>
     <div class="buy_ticket_suspend">
+        <a class="backtotop" href="javascript:scroll(0,0)"><img  src="images/backToTop.png"/></a>
         <a href="#">
             <img src="images/buy_ticket.png"/>
         </a>
