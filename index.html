@@ -154,33 +154,33 @@
                         $('.navbar').removeClass("navbar-fixed-top");
                     }
                 })
+                $(function(){
+                    $('.meet_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#meet_point_nav").offset().top - 100},200);
+                    });
+                    $('.preview_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#meet_preview_nav").offset().top - 100},200);
+                    });
+                    $('.special_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#special_commend_nav").offset().top - 100},200);
+                    });
+                    $('.guest_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#guest_speaker_nav").offset().top - 100},200);
+                    });
+                    $('.join_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#join_meeting_nav").offset().top - 100},200);
+                    });
+                    $('.Traffic_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#Traffic_guide_nav").offset().top - 100},200);
+                    });
+                    $('.Sponsor_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#Sponsorship_nav").offset().top - 100},200);
+                    });
+                    $('.bottom_nav').click(function(){
+                        $('body,html').animate({scrollTop:$("#bottom_banner_nav").offset().top - 100},200);
+                    });
+                })
             });
-            $(function(){
-                $('.meet_nav').click(function(){
-                    $('body').animate({scrollTop:$("#meet_point_nav").offset().top - 100},200);
-                });
-                $('.preview_nav').click(function(){
-                    $('body').animate({scrollTop:$("#meet_preview_nav").offset().top - 100},200);
-                });
-                $('.special_nav').click(function(){
-                    $('body').animate({scrollTop:$("#special_commend_nav").offset().top - 100},200);
-                });
-                $('.guest_nav').click(function(){
-                    $('body').animate({scrollTop:$("#guest_speaker_nav").offset().top - 100},200);
-                });
-                $('.join_nav').click(function(){
-                    $('body').animate({scrollTop:$("#join_meeting_nav").offset().top - 100},200);
-                });
-                $('.Traffic_nav').click(function(){
-                    $('body').animate({scrollTop:$("#Traffic_guide_nav").offset().top - 100},200);
-                });
-                $('.Sponsor_nav').click(function(){
-                    $('body').animate({scrollTop:$("#Sponsorship_nav").offset().top - 100},200);
-                });
-                $('.bottom_nav').click(function(){
-                    $('body').animate({scrollTop:$("#bottom_banner_nav").offset().top - 100},200);
-                });
-            })
         </script>
 
         <div class="middle_banner">
