@@ -34,6 +34,8 @@ html { overflow-x: hidden; }
 
 .navbar-default .navbar-nav>li>a:hover {background: #5DB8CF}
 
+.navbar-default .navbar-nav>li>a:focus {color: #ffffff}
+
 @media (min-width: 320px) and (max-width: 414px) {
     .banner {line-height: 60px}
 }
@@ -74,8 +76,13 @@ html { overflow-x: hidden; }
 .point_list {margin-top: 25px}
 .point_list li {background: #F0B400;color: #ffffff;text-align: center;font-size: 34px;font-weight: bold;line-height: 44px;position: relative}
 .point_list li span {display: block;padding: 102px 0}
-.point_list li:nth-child(2) {font-size: 26px;line-height: 34px}
-.point_list li:nth-child(2) > span {padding:94px 0 96px 0}
+
+
+.point_list li:nth-child(2) {font-size: 34px;line-height: 44px}
+
+.point_list li:nth-child(2) > span {/*padding:94px 0 96px 0*/padding: 102px 0}
+
+
 .point_list li:nth-child(1) {background: #3293ED url("../images/meet_point_icon1.png")no-repeat;background-size: 100% 100%}
 .point_list li:nth-child(3) {background: #44C79D url("../images/meet_point_icon4.png")no-repeat;background-size: 100% 100%}
 .point_list_title {display: none;}
